@@ -1,9 +1,7 @@
-var swiper = new Swiper(".mySwiper", {
-loop:true,
-autoplay:{delay:3000}
+window.addEventListener("scroll",()=>{
+document.querySelectorAll("section").forEach(sec=>{
+if(sec.getBoundingClientRect().top < window.innerHeight-100){
+sec.classList.add("show");
+}
 });
-
-var reviewSwiper = new Swiper(".reviewSwiper", {
-loop:true,
-autoplay:{delay:2000}
 });
