@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Best Dental Clinic in Indore & Rau | Garnish Dental</title>
-
-<meta name="description" content="Best dentist in Indore, Rau. Dental implants, RCT, braces. Book appointment now.">
-<meta name="keywords" content="best dentist in indore, dental clinic rau, implant indore">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garnish Dental Clinic</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="nav">
-<h2>Garnish Dental</h2>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-</nav>
+<header>
+  <img src="images/logo.png" class="logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section class="hero">
-<div>
-<h1>Best Dental Clinic in Indore & Rau</h1>
-<p>Smile Design | Implants | RCT</p>
-<a href="#form" class="btn">Book Appointment</a>
-</div>
+<!-- HERO SLIDER -->
+<section id="home" class="slider">
+  <div class="slide active">Best Dental Care</div>
+  <div class="slide">Smile Makeover Experts</div>
+  <div class="slide">Book Your Appointment</div>
 </section>
 
-<section id="form" class="section">
-<h2>Book Appointment</h2>
-
-<input id="name" placeholder="Name"><br><br>
-<input id="phone" placeholder="Phone"><br><br>
-
-<select id="service">
-<option>Dental Implant</option>
-<option>RCT</option>
-<option>Braces</option>
-</select><br><br>
-
-<button onclick="sendWhatsApp()" class="btn">Submit</button>
+<!-- ABOUT -->
+<section id="about">
+  <h2>Doctor</h2>
+  <img src="images/doctor.jpg" class="doctor">
+  <p>Dr. Kalpana Tomar - Dental Surgeon</p>
 </section>
 
-<section class="section">
-<h2>Google Reviews</h2>
-<iframe src="https://search.google.com/local/reviews?placeid=YOUR_PLACE_ID" width="100%" height="400"></iframe>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Dental Implant</div>
+    <div class="card">Root Canal</div>
+    <div class="card">Teeth Whitening</div>
+  </div>
 </section>
 
-<section class="section">
-<h2>Instagram</h2>
-<iframe src="https://www.instagram.com/YOURUSERNAME/embed" width="100%" height="400"></iframe>
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Before / After</h2>
+  <img src="images/before1.jpg">
+  <img src="images/after1.jpg">
+</section>
+  <!-- GALLERY -->
+<section id="gallery">
+  <h2>Before / After</h2>
+  <img src="images/before2.jpg">
+  <img src="images/after2.jpg">
 </section>
 
-<footer>
-<p>© Garnish Dental Clinic</p>
-</footer>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Book Appointment</h2>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="phone" placeholder="Phone" required>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
 
-<a href="https://wa.me/919370595129" class="whatsapp">💬</a>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919370595129" class="whatsapp">Chat</a>
 
 <script src="script.js"></script>
-
 </body>
 </html>
