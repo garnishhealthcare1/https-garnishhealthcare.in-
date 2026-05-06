@@ -3,83 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garnish Dental Clinic</title>
 
-<title>Best Dental Clinic in Rau & Indore | Garnish Healthcare</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<meta name="description" content="Best dental clinic in Rau & Indore for RCT, Implant, Smile Design. Book Appointment Now.">
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:white;
+}
 
-<link rel="stylesheet" href="css/style.css">
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+header img{
+  height:50px;
+}
+
+nav a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') no-repeat center/cover;
+}
+
+.hero h1{
+  font-size:50px;
+  animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#06b6d4;
+  border:none;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  width:250px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/logo.png" class="logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<img src="logo.png">
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Best Dental Clinic in Rau & Indore</h1>
-  <p>Smile Confidently with Expert Care</p>
-  <a href="https://wa.me/919370595129" class="btn">Book Appointment</a>
+<div>
+<h1>Best Dental Clinic in Indore & Rau</h1>
+<button class="btn" onclick="window.location.href='https://wa.me/919370595129'">Book Appointment</button>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section>
-  <h2>About Doctor</h2>
-  <img src="images/doctor.jpg">
-  <p>Experienced dental care with advanced technology.</p>
+<section class="section">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">Dental Implants</div>
+<div class="card">Root Canal</div>
+<div class="card">Teeth Whitening</div>
+</div>
 </section>
 
-<!-- SERVICES -->
-<section>
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div>Dental Implants</div>
-    <div>RCT</div>
-    <div>Smile Design</div>
-    <div>Braces</div>
-  </div>
+<section class="section">
+<h2>Why Choose Us</h2>
+<p>Advanced technology, expert doctors, painless treatment</p>
 </section>
 
-<!-- BEFORE AFTER -->
-<section>
-  <h2>Before & After</h2>
-  <img src="images/before.jpg">
-  <img src="images/after.jpg">
-</section>
+<a class="whatsapp" href="https://wa.me/919370595129">💬</a>
 
-<!-- REVIEWS -->
-<section class="reviews">
-  <h2>Patient Reviews</h2>
-  <div class="slider">
-    <div>⭐️⭐️⭐️⭐️⭐️ Excellent treatment</div>
-    <div>⭐️⭐️⭐️⭐️⭐️ Friendly doctor</div>
-    <div>⭐️⭐️⭐️⭐️⭐️ Highly recommended</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section>
-  <h2>Visit Us</h2>
-
-  <p>Clinic 1: Rau, Indore</p>
-  <iframe src="https://maps.google.com/maps?q=Rau%20Indore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-  <p>Clinic 2: Limbodi, Indore</p>
-  <iframe src="https://maps.google.com/maps?q=Limbodi%20Indore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-</section>
-
-<a href="https://wa.me/919370595129" class="whatsapp">💬</a>
-
-<script src="js/script.js"></script>
 </body>
 </html>
