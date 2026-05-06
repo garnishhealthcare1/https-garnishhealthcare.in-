@@ -93,3 +93,34 @@ padding:15px;
 border-radius:50%;
 font-size:20px;
 }
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #0a7;
+  color: white;
+  padding: 15px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+}
