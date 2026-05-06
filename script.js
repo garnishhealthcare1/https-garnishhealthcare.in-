@@ -1,9 +1,17 @@
-function sendWhatsApp(){
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let service = document.getElementById("service").value;
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
-let msg = `Appointment Request:%0AName: ${name}%0APhone: ${phone}%0AService: ${service}`;
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
 
-window.open(`https://wa.me/91XXXXXXXXXX?text=${msg}`);
+
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+
+  let msg = `Appointment Booking\nName: ${name}\nPhone: ${phone}`;
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`);
 }
