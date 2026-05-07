@@ -1,72 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Garnish Dental Clinic & Implant Center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Best Dental Clinic in Indore - RCT, Implant, Smile Design">
-<meta name="keywords" content="dentist indore, implant, rct, garnish dental">
+<title>Dr Kalpana Tomar | Smile Dental Clinic</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#f4fbff;}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#0077b6,#00b4d8);
+padding:15px 30px;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+nav a{color:white;margin:0 10px;text-decoration:none;font-weight:500}
+
+/* HERO */
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+color:white;
+text-align:center;
+}
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.6);
+}
+.hero div{position:relative;z-index:2;}
+.hero h1{font-size:45px;}
+
+/* SECTIONS */
+section{padding:60px 20px;text-align:center;}
+.title{font-size:30px;color:#0077b6;margin-bottom:20px;}
+
+/* DOCTOR */
+.doctor{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+.doctor img{
+width:280px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+max-width:500px;
+text-align:left;
+}
+
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+max-width:1000px;
+margin:auto;
+}
+.service{
+background:white;
+padding:20px;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.service:hover{transform:scale(1.05)}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+.modal-content{
+background:white;
+padding:25px;
+width:90%;
+max-width:500px;
+border-radius:12px;
+text-align:left;
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+}
+.gallery img{
+width:250px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* FLOAT */
+.fixed{
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+.fixed a{
+padding:12px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+}
+.wp{background:#25D366;}
+.call{background:#0077b6;}
+</style>
 </head>
 
 <body>
 
 <header>
-<img src="images/logo.png" class="logo">
-<h2>Garnish Dental Clinic & Implant Center</h2>
+<h3>🦷 Dr Kalpana Tomar Dental Clinic</h3>
+<nav>
+<a href="#doctor">Doctor</a>
+<a href="#services">Services</a>
+<a href="#gallery">Results</a>
+<a href="#reviews">Reviews</a>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+</nav>
 </header>
 
-<section class="hero">
-<h1>Advanced Dental Care in Indore</h1>
-<p>Choose Your Clinic</p>
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>Advanced Dental Care by Dr Kalpana Tomar</h1>
+<p>RCT | Implant | Cosmetic Dentistry | Smile Design</p>
+</div>
+</div>
+
+<!-- DOCTOR -->
+<section id="doctor">
+<h2 class="title">About Dr Kalpana Tomar</h2>
+
+<div class="doctor">
+
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2">
+
+<div class="card">
+<h3>Dr Kalpana Tomar</h3>
+<p><b>Senior Dental Surgeon</b></p>
+<p>✔ Expert in RCT, Implants, Cosmetic Dentistry</p>
+<p>✔ 10+ Years Clinical Experience</p>
+<p>✔ Focus: Painless & Advanced Treatment</p>
+<p>✔ Patient Friendly Approach</p>
+</div>
+
+</div>
 </section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="title">Our Services (Click for Details)</h2>
 
 <div class="grid">
 
-<a href="clinic-1.html" class="card">
-<h3>Clinic 1</h3>
-<p>Silicon City Rau</p>
-</a>
+<div class="service" onclick="openModal('RCT','Root Canal Treatment (RCT) is painless modern treatment for infected tooth.')">RCT Treatment</div>
 
-<a href="clinic-2.html" class="card">
-<h3>Clinic 2</h3>
-<p>Limbodi Indore</p>
-</a>
+<div class="service" onclick="openModal('Implant','Dental implant is permanent replacement of missing tooth.')">Dental Implant</div>
+
+<div class="service" onclick="openModal('Whitening','Teeth whitening gives instant bright smile in 1 visit.')">Teeth Whitening</div>
+
+<div class="service" onclick="openModal('Cleaning','Deep scaling removes plaque and keeps gums healthy.')">Scaling & Cleaning</div>
 
 </div>
-
-<!-- ⭐ GOOGLE REVIEWS LIVE -->
-<section>
-<h2>Google Reviews</h2>
-
-<iframe
-src="https://g.page/r/CdYhDtlXSMTjEBM/review"
-width="100%" height="300"></iframe>
-
 </section>
 
-<!-- 📸 INSTAGRAM LIVE FEED -->
-<section>
-<h2>Instagram Updates</h2>
+<!-- BEFORE AFTER -->
+<section id="gallery">
+<h2 class="title">Before & After Results</h2>
 
-<iframe
-src="https://www.instagram.com/garnish_dental/"
-width="100%" height="500"></iframe>
-
-</section>
-
-<!-- 🧠 AI CHATBOT -->
-<div id="aiBox">
-<div id="aiHeader">🧠 Dental AI Assistant</div>
-<div id="aiBody"></div>
-<input id="aiInput" placeholder="Ask anything...">
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09">
 </div>
+</section>
 
-<button class="aiBtn" onclick="toggleAI()">AI Help</button>
+<!-- GOOGLE REVIEWS -->
+<section id="reviews">
+<h2 class="title">Google Live Reviews</h2>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
+width="90%" height="300" style="border:0;border-radius:12px;"></iframe>
+
+<p>⭐ 4.8+ Rated Dental Clinic</p>
+</section>
 
 <!-- FLOAT -->
-<a class="wp" href="https://wa.me/919370595129">WhatsApp</a>
+<div class="fixed">
+<a class="call" href="tel:+919999999999">📞 Call</a>
+<a class="wp" href="https://wa.me/919999999999">💬 WhatsApp</a>
+</div>
 
-<script src="script.js"></script>
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<h2 id="mTitle"></h2>
+<p id="mText"></p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script>
+function openModal(title,text){
+document.getElementById("mTitle").innerText=title;
+document.getElementById("mText").innerText=text;
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+</script>
+
 </body>
 </html>
